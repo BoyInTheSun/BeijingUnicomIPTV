@@ -1,4 +1,4 @@
-#EXTM3U x-tvg-url="https://raw.githubusercontent.com/BoyInTheSun/BeijingUnicomIPTV/refs/heads/main/results/epg.xml.gz"
+#EXTM3U x-tvg-url="epg.xml.gz"
 #EXTINF:-1 tvg-id="1" tvg-chno="1" tvg-name="CCTV-1高清" catchup-type="disabled" group-title="CCTV频道" tvg-logo="",CCTV-1高清
 rtp://239.3.1.129:8008
 #EXTINF:-1 tvg-id="2" tvg-chno="2" tvg-name="CCTV-2高清" catchup-type="default" catchup-days="7" catchup-source="rtsp://61.135.88.136/PLTV/88888892/224/3221226036/10000100000000060000000000285832_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV频道" tvg-logo="",CCTV-2高清

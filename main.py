@@ -142,7 +142,7 @@ def save_m3u8():
     df = pd.read_csv(os.path.join('data', 'channels.csv'))
     output=os.path.join('results', 'iptv.m3u8')
     with open(output, 'w', encoding='utf-8') as f:
-        f.write('#EXTM3U x-tvg-url="https://raw.githubusercontent.com/BoyInTheSun/BeijingUnicomIPTV/refs/heads/main/results/epg.xml.gz"\n')
+        f.write('#EXTM3U x-tvg-url="epg.xml.gz"\n')
         for index, row in df.sort_values('userChannelID').iterrows():
             text = '#EXTINF:-1 '
             text += f'tvg-id="{row["userChannelID"]}" '
@@ -222,18 +222,18 @@ def save_epg():
             ))
             for date in list(dates_generator(datetime.date.today(), after_days=7, before_days=7)):
                 schedule_file = os.path.join('schedules', str(channel_id), date.strftime("%Y%m%d") + '.json')
-            if not os.path.exists(schedule_file):
-                continue
-            with open(schedule_file, 'r', encoding='utf-8') as f1:
-                schedules = json.load(f1).get('schedules')
-                for schedule in schedules:
-                    f.write('<programme start="{} +0800" stop="{} +0800" channel="{}">'.format(
-                        datetime.datetime.strptime(schedule['starttime'],'%Y-%m-%d %H:%M:%S').strftime('%Y%m%d%H%M%S'),
-                        datetime.datetime.strptime(schedule['endtime'],'%Y-%m-%d %H:%M:%S').strftime('%Y%m%d%H%M%S'),
-                        user_channel_id
-                    ))
-                    f.write('<title lang="zh">{}</title>'.format(schedule.get('title', '暂无信息').replace('<', '《').replace('>', '》').replace('&', '-')))
-                    f.write('</programme>')
+                if not os.path.exists(schedule_file):
+                    continue
+                with open(schedule_file, 'r', encoding='utf-8') as f1:
+                    schedules = json.load(f1).get('schedules')
+                    for schedule in schedules:
+                        f.write('<programme start="{} +0800" stop="{} +0800" channel="{}">'.format(
+                            datetime.datetime.strptime(schedule['starttime'],'%Y-%m-%d %H:%M:%S').strftime('%Y%m%d%H%M%S'),
+                            datetime.datetime.strptime(schedule['endtime'],'%Y-%m-%d %H:%M:%S').strftime('%Y%m%d%H%M%S'),
+                            user_channel_id
+                        ))
+                        f.write('<title lang="zh">{}</title>'.format(schedule.get('title', '暂无信息').replace('<', '《').replace('>', '》').replace('&', '-')))
+                        f.write('</programme>')
         f.write('</tv>')
     with gzip.open(os.path.join('results', 'epg.xml.gz'), 'wb') as f_out:
         with open(os.path.join('results', 'epg.xml'), 'rb') as f_in:
@@ -242,8 +242,8 @@ if __name__ == '__main__':
     for dir_names in ['data', 'schedules', 'results']:
         if not os.path.isdir(dir_names):
             os.mkdir(dir_names)
-    update_channel_list(test=True)
+    # update_channel_list(test=True)
     save_m3u8()
     # download_all_schedules(before_days=-1)
-    download_all_schedules()
+    # download_all_schedules()
     save_epg()
