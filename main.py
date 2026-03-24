@@ -1,6 +1,7 @@
 import datetime
 import json
 import os
+import sys
 import gzip
 import shutil
 import multiprocessing as mp
@@ -105,7 +106,6 @@ def test_rtsp_worker(url, queue):
     os.environ['OPENCV_FFMPEG_LOGLEVEL'] = '-8'
     with open(os.devnull, 'w') as devnull:
         # 重定向标准错误/输出到 null
-        import sys
         old_stderr = sys.stderr
         old_stdout = sys.stdout
         sys.stderr = devnull
@@ -124,7 +124,7 @@ def test_rtsp_worker(url, queue):
             sys.stderr = old_stderr
             sys.stdout = old_stdout
 
-def test_rtsp(url, timeout=3):
+def test_rtsp(url, timeout=10):
     queue = mp.Queue()
     p = mp.Process(target=test_rtsp_worker, args=(url, queue))
     p.start()
@@ -142,6 +142,7 @@ def save_m3u8():
     df = pd.read_csv(os.path.join('data', 'channels.csv'))
     output=os.path.join('results', 'iptv.m3u8')
     with open(output, 'w', encoding='utf-8') as f:
+        f.write('#EXTM3U x-tvg-url="https://raw.githubusercontent.com/BoyInTheSun/BeijingUnicomIPTV/refs/heads/main/results/epg.xml.gz"\n')
         for index, row in df.sort_values('userChannelID').iterrows():
             text = '#EXTINF:-1 '
             text += f'tvg-id="{row["userChannelID"]}" '

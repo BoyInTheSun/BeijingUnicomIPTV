@@ -175,5 +175,5 @@ channelID,userChannelID,channelURL,timeShift,channelSDP,timeShiftURL,channelLogo
 00000001000000050000000000000652,411,igmp://239.3.1.144:3005,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226206/403519612.smil,,True,0,1,山东卫视4K超高清,超高清频道,False,True,False
 01010001000000050000000000007513,80,igmp://239.3.1.24:8001,True,,rtsp://61.135.88.136/PLTV/88888892/224/3221226210/406742223.smil,"{'channelLogURL': None, 'positionX': 0, 'positionY': 0, 'interval': 0, 'beginTime': 'null', 'lasting': 'null'}",True,0,1,证券服务,体验频道,False,True,True
 01010001000000050000000000003488,349,igmp://239.3.1.25:8001,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226213/406750667.smil,"{'channelLogURL': None, 'positionX': 0, 'positionY': 0, 'interval': 0, 'beginTime': 'null', 'lasting': 'null'}",True,0,1,重温经典,无分类,False,True,True
-00000001000000050000000000000636,406,igmp://239.3.1.27:2000,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226215/407059592.smil,,True,0,1,广东卫视4K超高清,超高清频道,False,True,False
-00000001000000050000000000000638,408,igmp://239.3.1.28:2000,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226212/407058192.smil,,True,0,1,深圳卫视4K超高清,超高清频道,False,True,False
+00000001000000050000000000000636,406,igmp://239.3.1.27:2000,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226215/407059592.smil,,True,0,1,广东卫视4K超高清,超高清频道,False,True,True
+00000001000000050000000000000638,408,igmp://239.3.1.28:2000,False,,rtsp://61.135.88.136/PLTV/88888892/224/3221226212/407058192.smil,,True,0,1,深圳卫视4K超高清,超高清频道,False,True,True

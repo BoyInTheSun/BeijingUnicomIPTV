@@ -1,3 +1,4 @@
+#EXTM3U x-tvg-url="https://raw.githubusercontent.com/BoyInTheSun/BeijingUnicomIPTV/refs/heads/main/results/epg.xml.gz"
 #EXTINF:-1 tvg-id="1" tvg-chno="1" tvg-name="CCTV-1高清" catchup-type="disabled" group-title="CCTV频道" tvg-logo="",CCTV-1高清
 rtp://239.3.1.129:8008
 #EXTINF:-1 tvg-id="2" tvg-chno="2" tvg-name="CCTV-2高清" catchup-type="default" catchup-days="7" catchup-source="rtsp://61.135.88.136/PLTV/88888892/224/3221226036/10000100000000060000000000285832_0.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="CCTV频道" tvg-logo="",CCTV-2高清
@@ -322,11 +323,11 @@ rtp://239.3.1.236:2000
 # rtp://239.3.1.121:8000
 #EXTINF:-1 tvg-id="405" tvg-chno="405" tvg-name="湖南卫视4K超高清" catchup-type="disabled" group-title="超高清频道" tvg-logo="",湖南卫视4K超高清
 rtp://239.3.1.112:3002
-#EXTINF:-1 tvg-id="406" tvg-chno="406" tvg-name="广东卫视4K超高清" catchup-type="disabled" group-title="超高清频道" tvg-logo="",广东卫视4K超高清
+#EXTINF:-1 tvg-id="406" tvg-chno="406" tvg-name="广东卫视4K超高清" catchup-type="default" catchup-days="7" catchup-source="rtsp://61.135.88.136/PLTV/88888892/224/3221226215/407059592.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="超高清频道" tvg-logo="",广东卫视4K超高清
 rtp://239.3.1.27:2000
 #EXTINF:-1 tvg-id="407" tvg-chno="407" tvg-name="江苏卫视4K超高清" catchup-type="disabled" group-title="超高清频道" tvg-logo="",江苏卫视4K超高清
 rtp://239.3.1.113:3003
-#EXTINF:-1 tvg-id="408" tvg-chno="408" tvg-name="深圳卫视4K超高清" catchup-type="disabled" group-title="超高清频道" tvg-logo="",深圳卫视4K超高清
+#EXTINF:-1 tvg-id="408" tvg-chno="408" tvg-name="深圳卫视4K超高清" catchup-type="default" catchup-days="7" catchup-source="rtsp://61.135.88.136/PLTV/88888892/224/3221226212/407058192.smil?playseek={utc:YmdHMS}-{utcend:YmdHMS}" group-title="超高清频道" tvg-logo="",深圳卫视4K超高清
 rtp://239.3.1.28:2000
 #EXTINF:-1 tvg-id="409" tvg-chno="409" tvg-name="东方卫视4K超高清" catchup-type="disabled" group-title="超高清频道" tvg-logo="",东方卫视4K超高清
 rtp://239.3.1.119:3006
