@@ -142,7 +142,7 @@ def save_m3u8():
     df = pd.read_csv(os.path.join('data', 'channels.csv'))
     output=os.path.join('results', 'iptv.m3u8')
     with open(output, 'w', encoding='utf-8') as f:
-        f.write('#EXTM3U x-tvg-url="epg.xml.gz"\n')
+        f.write('#EXTM3U x-tvg-url="https://raw.githubusercontent.com/BoyInTheSun/BeijingUnicomIPTV/refs/heads/main/results/epg.xml.gz"\n')
         for index, row in df.sort_values('userChannelID').iterrows():
             text = '#EXTINF:-1 '
             text += f'tvg-id="{row["userChannelID"]}" '
