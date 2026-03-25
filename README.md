@@ -1,4 +1,4 @@
-***推荐优先使用https://github.com/zzzz0317/beijing-unicom-iptv-playlist，本项目暂停维护***
+***推荐优先使用https://github.com/zzzz0317/beijing-unicom-iptv-playlist ，本项目暂停维护***
 
 # BeijingUnicomIPTV
 
