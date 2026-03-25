@@ -1,3 +1,5 @@
+***推荐优先使用https://github.com/zzzz0317/beijing-unicom-iptv-playlist，本项目暂停维护***
+
 # BeijingUnicomIPTV
 
 北京联通IPTV播放列表、台标及节目单生成工具
