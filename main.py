@@ -125,6 +125,7 @@ def test_rtsp_worker(url, queue):
             sys.stdout = old_stdout
 
 def test_rtsp(url, timeout=10):
+    url = url + f'?playseek={(datetime.datetime.now() - datetime.timedelta(hours=2)).strftime("%Y%m%d%H%M%S")}-{(datetime.datetime.now() - datetime.timedelta(hours=1)).strftime("%Y%m%d%H%M%S")}'
     queue = mp.Queue()
     p = mp.Process(target=test_rtsp_worker, args=(url, queue))
     p.start()
@@ -242,7 +243,7 @@ if __name__ == '__main__':
     for dir_names in ['data', 'schedules', 'results']:
         if not os.path.isdir(dir_names):
             os.mkdir(dir_names)
-    # update_channel_list(test=True)
+    update_channel_list(test=True)
     save_m3u8()
     # download_all_schedules(before_days=-1)
     # download_all_schedules()
